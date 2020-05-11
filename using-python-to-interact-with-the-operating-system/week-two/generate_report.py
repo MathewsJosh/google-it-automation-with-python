@@ -8,7 +8,9 @@ def read_employees(csv_file_location):
         employee_list.append(data)
     return employee_list
 
-employee_list = read_employees('/home/student-01-7ae3abd56cd7/data/employees.csv')
+#FOR FIRST TEST
+employee_list = read_employees('/home/YOUR_USERNAME/data/employees.csv')
+print(employee_list) #COMENT THIS LINE AFTER THE FIRST TEST
 
 def process_data(employee_list):
     department_list = []
@@ -20,7 +22,9 @@ def process_data(employee_list):
         department_data[department_name] = department_list.count(department_name)
     return department_data
 
+#FOR SECOND TEST
 dictionary = process_data(employee_list)
+print(dictionary) #COMENT THIS LINE AFTER THE SECOND TEST
 
 def write_report(dictionary, report_file):
     with open(report_file, "w+") as f:
@@ -28,4 +32,4 @@ def write_report(dictionary, report_file):
             f.write(str(k)+':'+str(dictionary[k])+'\n')
     f.close()
 
-write_report(dictionary, '/home/student-01-7ae3abd56cd7/test_report.txt')
+write_report(dictionary, '/home/YOUR_USERNAME/test_report.txt')
